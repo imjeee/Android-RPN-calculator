@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:binding="http://www.gueei.com/android-binding/"
+	android:orientation="vertical" 
+  android:layout_width="fill_parent"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+	android:layout_height="fill_parent">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+    android:textSize="45dip"
+		android:gravity="right|bottom" 
+    binding:text="formattedDisplay"
+		android:layout_weight="1"/>
+	<TableLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content" 
+               android:stretchColumns="0,1,2,3">
+
+    <TableRow>
+      <EditText android:id="@+id/Solution"
+          android:layout_span="4"
+          android:textSize="60dip"
+          android:gravity="right"
+          android:singleLine="true"/>   
+    </TableRow>
+
+    <TableRow>
+      <EditText android:id="@+id/ToCalculate"
+          android:layout_span="4"
+          android:gravity="bottom"
+          android:singleLine="true"/>
+    </TableRow>
+
+		<TableRow>
+			<Button android:text=" Sin " android:id="@+id/Sin" />
+			<Button android:text=" Cos " android:id="@+id/Cos" />
+			<Button android:text=" Tan " android:id="@+id/Tan" />
+			<Button android:text=" Sqrt " android:id="@+id/Sqrt" />
+		</TableRow>
+
+		<TableRow>
+			<Button android:text="7" android:id="@+id/Number7" />
+			<Button android:text="8" android:id="@+id/Number8" />
+			<Button android:text="9" android:id="@+id/Number9" />
+			<Button android:text=" + " android:id="@+id/Plus" />
+		</TableRow>
+
+		<TableRow>
+			<Button android:text="4" android:id="@+id/Number4" />
+			<Button android:text="5" android:id="@+id/Number5" />
+			<Button android:text="6" android:id="@+id/Number6" />
+			<Button android:text=" - " android:id="@+id/Minus" />
+		</TableRow>
+
+		<TableRow>
+			<Button android:text="1" android:id="@+id/Number1" />
+			<Button android:text="2" android:id="@+id/Number2" />
+			<Button android:text="3" android:id="@+id/Number3" />
+			<Button android:text=" * " android:id="@+id/Multiply" />
+		</TableRow>
+
+		<TableRow>
+			<Button android:text="0" android:id="@+id/Number0"/>
+			<Button android:text="." android:id="@+id/Dot" />
+			<Button android:text="π" android:id="@+id/Pi" />
+			<Button android:text=" / " android:id="@+id/Divide" />
+		</TableRow>
+
+		<TableRow>
+			<Button android:text="Space" android:id="@+id/Space" android:layout_span="2"/>
+      <Button android:text="C" android:id="@+id/Clear"/>
+			<Button android:text="=" android:id="@+id/Equal" />
+		</TableRow>
+
+	</TableLayout>
+</LinearLayout>
