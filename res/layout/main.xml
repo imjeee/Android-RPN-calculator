@@ -6,12 +6,7 @@
   android:focusable="true"
   android:focusableInTouchMode="true"
 	android:layout_height="fill_parent">
-	<TextView android:layout_width="fill_parent"
-		android:layout_height="fill_parent" 
-    android:textSize="45dip"
-		android:gravity="right|bottom" 
-    binding:text="formattedDisplay"
-		android:layout_weight="1"/>
+	
 	<TableLayout android:layout_width="fill_parent"
                android:layout_height="wrap_content" 
                android:stretchColumns="0,1,2,3">
@@ -19,7 +14,7 @@
     <TableRow>
       <EditText android:id="@+id/Solution"
           android:layout_span="4"
-          android:textSize="60dip"
+          android:textSize="50dip"
           android:gravity="right"
           android:singleLine="true"/>   
     </TableRow>
@@ -30,6 +25,13 @@
           android:gravity="bottom"
           android:singleLine="true"/>
     </TableRow>
+
+		<TableRow>
+			<Button android:text="Save x" android:id="@+id/SaveX" />
+			<Button android:text="Save y" android:id="@+id/SaveY" />
+			<Button android:text="x" android:id="@+id/UseX" />
+			<Button android:text="y" android:id="@+id/UseY" />
+		</TableRow>
 
 		<TableRow>
 			<Button android:text=" Sin " android:id="@+id/Sin" />
