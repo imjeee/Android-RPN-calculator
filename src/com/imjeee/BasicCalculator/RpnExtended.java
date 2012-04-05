@@ -3,7 +3,12 @@ package com.imjeee.BasicCalculator;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Stack;
-
+/**
+ * 
+ * @author g
+ *
+ * RpnExtended adds sin, cos, tan, sqrt, custom x, custom y, and ¹ support
+ */
 public class RpnExtended extends Rpn {
 	public static void main(String[] args) throws IOException  {
     }
@@ -38,6 +43,8 @@ public class RpnExtended extends Rpn {
         	result = BasicCalculatorActivity.x;
         } else if (tk.equals("Y")){
         	result = BasicCalculatorActivity.y;
+        } else if (tk.equals("¹")){
+        	result = Math.PI;
         } else {
             result = Double.parseDouble(tk);
         }

@@ -16,7 +16,7 @@ public class BasicCalculatorActivity extends Activity {
     public static Double y;
 
     private int[] savedVarButtons = {R.id.SaveX, R.id.SaveY, R.id.UseX, R.id.UseY};
-    private int[] specialButtons = {R.id.Equal, R.id.Clear, R.id.Space, R.id.Pi};
+    private int[] specialButtons = {R.id.Equal, R.id.Clear, R.id.Space};
     private int[] buttons = {R.id.Sin, R.id.Cos, R.id.Tan, R.id.Sqrt, 
                              R.id.Number7, R.id.Number8, R.id.Number9, R.id.Plus,
                              R.id.Number4, R.id.Number5, R.id.Number6, R.id.Minus,
@@ -47,11 +47,11 @@ public class BasicCalculatorActivity extends Activity {
                         if (btnString.equals("Save x"))
                             x = Double.valueOf(solution.getText().toString());
                         else if (btnString.equals("x"))
-                        	toCalculate.append(" x ");//String.valueOf(x));
+                        	toCalculate.append(" x ");
                         else if (btnString.equals("Save y"))
                         	x = Double.valueOf(solution.getText().toString());
                         else if (btnString.equals("y"))
-                        	toCalculate.append(" y ");//String.valueOf(y));
+                        	toCalculate.append(" y ");
                         else 
                             System.out.println("error");
                     }         
@@ -77,8 +77,7 @@ public class BasicCalculatorActivity extends Activity {
                             toCalculate.append(" ");
                         else if (btnString.equals("C"))
                             toCalculate.setText("");
-                        else if (btnString.equals("¹"))
-                            toCalculate.append(" 3.14 ");
+                        
                         else 
                             System.out.println("error");
                     }         
