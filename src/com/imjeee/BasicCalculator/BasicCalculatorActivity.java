@@ -25,7 +25,7 @@ public class BasicCalculatorActivity extends Activity {
 
   /** Called when the activity is first created. */
   @Override
-    public void onCreate(Bundle savedInstanceState) {
+  public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     this.setContentView(R.layout.main);
 
@@ -49,13 +49,14 @@ public class BasicCalculatorActivity extends Activity {
             else if (btnString.equals("x"))
               toCalculate.append(" x ");
             else if (btnString.equals("Save y"))
-              x = Double.valueOf(solution.getText().toString());
+              y = Double.valueOf(solution.getText().toString());
             else if (btnString.equals("y"))
               toCalculate.append(" y ");
             else 
               System.out.println("error");
           }         
-        });}
+        });
+    }
   }
 
   private void initToCalculate(){
@@ -77,11 +78,11 @@ public class BasicCalculatorActivity extends Activity {
               toCalculate.append(" ");
             else if (btnString.equals("C"))
               toCalculate.setText("");
-                        
             else 
               System.out.println("error");
           }         
-        });}
+        });
+    }
   }
 
   private void initScreenButtons(){
@@ -94,4 +95,5 @@ public class BasicCalculatorActivity extends Activity {
         });
     }
   }
+
 }
