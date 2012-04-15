@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Rpn  {
 	
-  public static double solve(String s){
+  public double solve(String s){
     Stack<String> tks = new Stack<String>();
     tks.addAll(Arrays.asList(s.trim().split("[ \t]+")));
     try  {
@@ -17,7 +17,7 @@ public class Rpn  {
     return 0;
   }
   
-  protected static double evalrpn(Stack<String> tks) throws Exception {
+  protected double evalrpn(Stack<String> tks) throws Exception {
     String tk = tks.pop();
     double x,y;
     try  {

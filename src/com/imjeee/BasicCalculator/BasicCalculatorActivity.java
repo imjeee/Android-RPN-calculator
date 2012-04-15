@@ -10,10 +10,12 @@ import android.view.View.OnClickListener;
 
 public class BasicCalculatorActivity extends Activity {
 
-  public static TextView solution;
-  public static EditText toCalculate;
+  public TextView solution;
+  public EditText toCalculate;
   public static Double x;
   public static Double y;
+  RpnExtended calculator;
+  
 
   private int[] savedVarButtons = {R.id.SaveX, R.id.SaveY, R.id.UseX, R.id.UseY};
   private int[] specialButtons = {R.id.Equal, R.id.Clear, R.id.Space};
@@ -33,6 +35,7 @@ public class BasicCalculatorActivity extends Activity {
     initScreenButtons();
     initSpecialButton();
     initToCalculate();
+    calculator = new RpnExtended();
   }
 
   private void initSavedVarButtons(){
@@ -72,7 +75,7 @@ public class BasicCalculatorActivity extends Activity {
           public void onClick(View v){
             String btnString = btn.getText().toString();
             if (btnString.equals("=")){
-              double result = RpnExtended.solve(toCalculate.getText().toString());
+              double result = calculator.solve(toCalculate.getText().toString());
               solution.setText(Double.toString(result));
             } else if (btnString.equals("Space"))
               toCalculate.append(" ");

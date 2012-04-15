@@ -9,7 +9,7 @@ import java.util.Stack;
  */
 public class RpnExtended extends Rpn {
 	
-	protected static double evalrpn(Stack<String> tks) throws Exception  {
+	protected double evalrpn(Stack<String> tks) throws Exception  {
     double result;
     String tk = tks.pop();
     if (tk.equals("Sin") || tk.equals("Cos") || tk.equals("Sqrt") || tk.equals("Tan")){
@@ -31,7 +31,7 @@ public class RpnExtended extends Rpn {
     return result;
   }
      
-  private static double unaryOp(double x, String op) {
+  private double unaryOp(double x, String op) {
     
     if (op.equals("Cos"))
       return Math.acos(x);
@@ -46,7 +46,7 @@ public class RpnExtended extends Rpn {
     return 0;
   }
      
-  private static double binaryOp(double x, double y, String op) {
+  private double binaryOp(double x, double y, String op) {
     if (op.equals("+"))
       return x + y;
     else if (op.equals("-"))
