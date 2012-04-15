@@ -3,6 +3,7 @@ package com.imjeee.BasicCalculator;
 import java.util.*;
 
 public class Rpn  {
+	
   public static double solve(String s){
     Stack<String> tks = new Stack<String>();
     tks.addAll(Arrays.asList(s.trim().split("[ \t]+")));

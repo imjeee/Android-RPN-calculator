@@ -8,6 +8,7 @@ import java.util.Stack;
  * RpnExtended adds sin, cos, tan, sqrt, custom x, custom y, and ¹ support
  */
 public class RpnExtended extends Rpn {
+	
 	protected static double evalrpn(Stack<String> tks) throws Exception  {
     double result;
     String tk = tks.pop();
